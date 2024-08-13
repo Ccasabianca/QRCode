@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 id="navTitle">QR Code Generator</h1>
+            <div class="language-selector">
+                <select id="language" name="language" onchange="changeLanguage()">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form id="qrForm">
+            <label for="url" id="urlLabel">Enter URL:</label>
+            <input type="text" id="url" name="url" placeholder="https://example.com" required>
+            
+            <label for="errorCorrection" id="errorCorrectionLabel">Error Correction Level:</label>
+            <select id="errorCorrection" name="errorCorrection">
+                <option value="L">Low (L - 7%)</option>
+                <option value="M">Medium (M - 15%)</option>
+                <option value="Q">Quartile (Q - 25%)</option>
+                <option value="H">High (H - 30%)</option>
+            </select>
+            
+            <button type="submit" id="generateButton">Generate QR Code</button>
+        </form>
+        
+        <div id="qrCode">
+        </div>
+        <button id="downloadButton">Download QR Code</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
