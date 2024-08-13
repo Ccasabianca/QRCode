@@ -1,123 +1,145 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .navbar {
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0px;
-    flex-direction: row;
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  flex-direction: row;
+  padding: 2rem 0 2rem 0;
 }
 
 #navTitle {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    flex-shrink: 0;
-    padding-left: 40%;
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  flex-shrink: 0;
 }
 
 .language-selector {
-    margin: 0 auto ;
-    padding-right: 5%;
+  margin: 0 auto;
 }
 
 .language-selector select {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    width: auto;
-    flex-shrink: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
-    width: 100%;
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+  width: 100%;
 }
 
-select, button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 input {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-} 
-
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
 
 button {
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  border: none;
 }
 
 button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 #qrCode {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    height: 256px;
-    width: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 256px;
+  width: 256px;
 }
 
 #downloadButton {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: none;
 }
 
 #downloadButton:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  #navTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 376px) {
+  #navTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 436px) {
+  #navTitle {
+    position: absolute;
+  }
+
+  .language-selector {
+    position: absolute;
+    right: 1.3rem;
+  }
 }
